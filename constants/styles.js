@@ -24,6 +24,8 @@ const Styles = {
     process: "#FBBF24",
     greenlight: "#F2FFEF",
     green2: "#F2FAF6",
+    gray1: "#A3A3A3",
+    graySubtle: "#D1D5DB",
 
     shadow: "#0F402A",
   },

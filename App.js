@@ -9,6 +9,9 @@ import { Ionicons } from "@expo/vector-icons";
 import Orders from "./screens/Orders";
 import Styles from "./constants/styles";
 import OrderHistory from "./screens/OrderHistory";
+import SignIn from "./screens/SignIn";
+import Card from "./components/Card";
+import IconTab from "./components/IconTab";
 
 //navigation Implementation
 const Drawer = createDrawerNavigator();
@@ -60,6 +63,11 @@ const App = () => {
   return (
     <>
       <StatusBar style="auto" />
+      <Card />
+
+      {/* <SignIn /> */}
+
+      {/*
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
@@ -73,6 +81,7 @@ const App = () => {
           <Stack.Screen name="Home" component={Home} />
         </Stack.Navigator>
       </NavigationContainer>
+          */}
     </>
   );
 };
