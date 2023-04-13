@@ -12,6 +12,7 @@ import OrderHistory from "./screens/OrderHistory";
 import SignIn from "./screens/SignIn";
 import Card from "./components/Card";
 import IconTab from "./components/IconTab";
+import AppNavigator from "./screens/AppNavigator";
 
 //navigation Implementation
 const Drawer = createDrawerNavigator();
@@ -20,68 +21,53 @@ const Drawer = createDrawerNavigator();
 const Stack = createNativeStackNavigator();
 
 const App = () => {
-  function DrawerNavigation() {
-    return (
-      <Drawer.Navigator
-        screenOptions={{
-          headerStyle: {
-            backgroundColor: Styles.COLORS[500],
-          },
-          headerTintColor: "white",
-          sceneContainerStyle: {
-            backgroundColor: Styles.COLORS.light,
-          },
-          //------------------
-          //styling the drawer
-          drawerContentStyle: { backgroundColor: Styles.COLORS[500] },
-          drawerInactiveTintColor: "white",
-          drawerActiveTintColor: "white",
-          drawerActiveBackgroundColor: Styles.COLORS[300],
-        }}
-      >
-        <Drawer.Screen
-          name="Orders"
-          component={Orders}
-          options={{
-            drawerIcon: ({ color, size }) => (
-              <Ionicons name="home" color={color} size={size} />
-            ),
-          }}
-        />
-        <Drawer.Screen
-          name="Order History"
-          component={OrderHistory}
-          options={{
-            drawerIcon: ({ color, size }) => (
-              <Ionicons name="pizza" size={size} color={color} />
-            ),
-          }}
-        />
-      </Drawer.Navigator>
-    );
-  }
+  //drawer navigation
+  // function DrawerNavigation() {
+  //   return (
+  //     <Drawer.Navigator
+  //       screenOptions={{
+  //         headerStyle: {
+  //           backgroundColor: Styles.COLORS[500],
+  //         },
+  //         headerTintColor: "white",
+  //         sceneContainerStyle: {
+  //           backgroundColor: Styles.COLORS.light,
+  //         },
+  //         //------------------
+  //         //styling the drawer
+  //         drawerContentStyle: { backgroundColor: Styles.COLORS[500] },
+  //         drawerInactiveTintColor: "white",
+  //         drawerActiveTintColor: "white",
+  //         drawerActiveBackgroundColor: Styles.COLORS[300],
+  //       }}
+  //     >
+  //       <Drawer.Screen
+  //         name="Orders"
+  //         component={Orders}
+  //         options={{
+  //           drawerIcon: ({ color, size }) => (
+  //             <Ionicons name="home" color={color} size={size} />
+  //           ),
+  //         }}
+  //       />
+  //       <Drawer.Screen
+  //         name="Order History"
+  //         component={OrderHistory}
+  //         options={{
+  //           drawerIcon: ({ color, size }) => (
+  //             <Ionicons name="pizza" size={size} color={color} />
+  //           ),
+  //         }}
+  //       />
+  //     </Drawer.Navigator>
+  //   );
+  // }
   return (
     <>
-      <StatusBar style="auto" />
-      <Card />
-
-      {/* <SignIn /> */}
-
-      {/*
+      <StatusBar style="light" />
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen
-            name="DrawerNavigation"
-            component={DrawerNavigation}
-            options={{
-              headerShown: false,
-            }}
-          />
-
-          <Stack.Screen name="Home" component={Home} />
-        </Stack.Navigator>
+        <AppNavigator />
       </NavigationContainer>
-          */}
     </>
   );
 };

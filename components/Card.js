@@ -99,8 +99,6 @@ const style = StyleSheet.create({
     minWidth: 328,
     backgroundColor: Styles.COLORS.light,
     borderRadius: Styles.RADIUS.Medium,
-    elevation: 7,
-    shadowColor: Styles.COLORS[400],
     overflow: "hidden",
   },
   topDetails: {
