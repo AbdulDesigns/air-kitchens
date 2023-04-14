@@ -5,17 +5,7 @@ import Home from "./screens/Home";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { NavigationContainer } from "@react-navigation/native";
-import { Ionicons } from "@expo/vector-icons";
-import Orders from "./screens/Orders";
-import Styles from "./constants/styles";
-import OrderHistory from "./screens/OrderHistory";
-import SignIn from "./screens/SignIn";
-import Card from "./components/Card";
-import IconTab from "./components/IconTab";
 import AppNavigator from "./screens/AppNavigator";
-
-//navigation Implementation
-const Drawer = createDrawerNavigator();
 
 //navigation Container
 const Stack = createNativeStackNavigator();
