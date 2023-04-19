@@ -1,4 +1,4 @@
-import { Image, StyleSheet } from "react-native";
+import { StyleSheet } from "react-native";
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "./Home";
@@ -34,7 +34,6 @@ const AppNavigator = () => {
           tabBarIcon: ({ size, color }) => {
             return <Ionicons name="home" size={size} color={color} />;
           },
-          
         }}
       />
       <Tab.Screen
