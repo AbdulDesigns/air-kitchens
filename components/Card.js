@@ -12,14 +12,7 @@ const Card = () => {
 
   return (
     // {main card container}
-    <View
-      style={{
-        backgroundColor: "white",
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <View>
       <View style={style.mainContainer}>
         <View style={style.topDetails}>
           <View style={style.inTopDetailsContainer}>
@@ -96,7 +89,7 @@ export default Card;
 //card styling
 const style = StyleSheet.create({
   mainContainer: {
-    minWidth: 328,
+    maxWidth: 328,
     backgroundColor: Styles.COLORS.light,
     borderRadius: Styles.RADIUS.Medium,
     overflow: "hidden",

@@ -22,7 +22,7 @@ const SignIn = () => {
 
   const navigation = useNavigation();
 
-  //listener to let user in
+  //listener
   useEffect(() => {
     const unSubscribe = auth.onAuthStateChanged((user) => {
       if (user) {
@@ -41,15 +41,14 @@ const SignIn = () => {
         // Signed in
         const user = userCredential.user;
         Alert.alert("signed in");
-        // ...
       })
       .catch((error) => {
-        console.log(error.message);
+        Alert.alert("invalid credentials");
       });
   }
 
   return (
-    <SafeAreaView>
+    <>
       <View style={style.mainContainer}>
         <View style={style.imageContainer}>
           <Image
@@ -78,11 +77,19 @@ const SignIn = () => {
             style={style.btn}
             android_ripple={{ color: Styles.COLORS[500] }}
           >
-            <Text style={{ textAlign: "center", color: "white" }}>Sign in</Text>
+            <Text
+              style={{
+                textAlign: "center",
+                color: "white",
+                fontFamily: "Barlow-Medium",
+              }}
+            >
+              Sign in
+            </Text>
           </Pressable>
         </View>
       </View>
-    </SafeAreaView>
+    </>
   );
 };
 
@@ -122,7 +129,7 @@ const style = StyleSheet.create({
   },
   subHeader: {
     fontSize: Styles.FONT_SIZE.base,
-    fontWeight: "800",
+    fontFamily: "Barlow-Regular",
     marginBottom: 12,
   },
   inputContainer: {
@@ -136,5 +143,6 @@ const style = StyleSheet.create({
     paddingHorizontal: 16,
     paddingVertical: 12,
     marginBottom: 12,
+    fontFamily: "Barlow-Regular",
   },
 });

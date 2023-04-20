@@ -7,8 +7,6 @@ import OrderHistory from "./OrderHistory";
 import Profile from "./Profile";
 import { Ionicons } from "@expo/vector-icons";
 import Styles from "../constants/styles";
-import { StatusBar } from "expo-status-bar";
-import { color } from "react-native-reanimated";
 
 //creating bottom tab navigator
 const Tab = createBottomTabNavigator();
@@ -68,6 +66,3 @@ const AppNavigator = () => {
 };
 
 export default AppNavigator;
-
-//styles
-const style = StyleSheet.create({});
